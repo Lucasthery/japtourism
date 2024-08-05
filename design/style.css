@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https ://fonts.googleapis.com/css2 ?family=Pacifico&family=Roboto :ital,wght@0,100 ; 0,300; 0,400; 0,500; 0,700; 0,900; 1,100; 1,300; 1,400; 1,500; 1,700; 1 900&display=swap') ;
+body{
+  margin: 0;
+ } 
+*{
+  box-sizing: border-box;
+}
+ a{
+  text-decoration: none;
+ }
+
+ header{
+  font-size: 65px;
+  font-family: 'Pacifico', 'cursive';
+  color: aliceblue;
+  text-shadow: 0 0 6px pink;
+
+ }
+  
+.bienvenue{
+background: url("https://www.destinationcocktails.fr/wp-content/uploads/2019/11/Japon-min.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+height: 100vh;
+display: flex;
+justify-items: left;
+align-items: center;
+flex-direction: row;
+}
+
+h1{
+  font-size: 60px;
+  color:#EBACA2;
+  font-family: 'Pacifico', 'cursive';
+  margin-bottom: 20px;
+
+}
+.contenu{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.top{
+  margin-bottom: 20px ;
+  font-family: 'Roboto';
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.villes{
+    background-size: cover;
+  width: 100%; 
+  height: 100%;
+  min-height: 400px;
+ /* min-width: 200px;
+ /* max-width: 400px;
+  max-height: 400px;*/
+  border: 3px solid white;
+  transition: all 0.2s;
+  cursor: pointer;
+  border-radius: 30px;
+  font-size: 30px;
+  color: white;
+  text-shadow: 0 0 20px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*flex-direction: row;*/
+
+  }
+
+  .villes:hover{
+    border: 3px solid #F0604D;
+  }
+
+
+
+
+.flexbox-villes{
+  /*display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-direction: row;*/
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  /*grid-template-rows:3,1fr ;*/
+  gap: 10px;
+}
+
+.Tokyo{
+  background-image:url("https://www.gotokyo.org/fr/destinations/southern-tokyo/images/499_0354_2.jpg") ;
+  grid-row: 1/3;
+ 
+}
+.Kyoto{
+  background-image:url("https://content.r9cdn.net/rimg/dimg/38/93/de70f3b4-city-20339-551a6f73.jpg?width=1366&height=768&xhint=1814&yhint=1179&crop=true") ;
+  grid-column: 2/4;
+}
+.Osaka{
+  background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4u1dXpq7ZngbwAUPDHvFb-eszeQCQP4tAUQ&s") ;
+ 
+}
+
+.Nara{
+  background-image:url("https://cdn-s-www.leprogres.fr/images/32C7EAE5-A8A8-4294-AC67-2DCF724D753F/NW_raw/le-fameux-temple-todai-ji-l-un-des-symboles-de-la-ville-de-nara-photo-progres-adobestock-1580490012.jpg");
+}
+
+.voir{
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+   align-items:center ;
+   color: #F0604D;
+   transition: all 0.4s;
+   gap: 0;
+}
+
+  .voir:hover{
+    gap: 10px;
+    
+  }
+
+ /* .voir:visited{
+    color:red
+  }*/
+  
+
+    
+footer{
+  background: left/150px url("https://d1o2pwfline4gu.cloudfront.net/m/s/24064/24054823/a-0005.png"), #D4D3DC;
+  padding: 15px;
+  font-size: 13px;
+  margin-top: 30px;
+}
+.flexbox-foot{
+  display: flex ;
+   align-items: center; 
+  justify-content: space-between
+}
+
+
+ul{
+  margin: 5px 0;
+  font-size: 11px;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  gap: 15px;
+}
+
+.conteneur{
+  width: 1300px;
+  margin: 0 auto;
+ 
+}
+
+.contenu{
+  padding: 10px;
+  
+}
+
+.slogan{
+  display: block;
+  font-family: 'Roboto';
+  color: aliceblue;
+  font-size: 30px;
+}
+
+@media all and (max-width:1350px){
+.conteneur{
+  width:800px
+  }
+.flexbox-villes{
+  grid-template-columns: repeat(2,1fr);
+  
+}
+/*.Tokyo{
+  grid-row: 1/2;
+
+}*/
+.Kyoto{
+  grid-column: auto;
+}
+.Nara{
+  grid-column: 1/3;
+}
+}
+@media all and (max-width:820px){
+  .conteneur{
+    width: 500px;
+  }
+  .flexbox-villes{
+    grid-template-columns: 1fr;
+
+  }
+  .Tokyo{
+    grid-row: auto;
+  }
+  .Nara{
+    grid-column: auto;
+  }
+  .flexbox-foot{
+    flex-direction: column;
+  }
+  .logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+
+@media all and (max-width:540px){
+  .conteneur{
+    width: 100%;
+  }
+.bienvenue{
+  padding: 15px;
+}
+}
+
